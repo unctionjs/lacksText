@@ -1,7 +1,7 @@
 /* eslint-disable flowtype/require-parameter-type, flowtype/require-return-type */
 import {test} from "tap"
 
-import keyChain from "./source"
+import lacksText from "./source"
 
 test(({ok, end}) => {
   ok(lacksText(".")("I have no period"))
