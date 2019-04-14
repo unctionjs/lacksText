@@ -1,14 +1,14 @@
 /* eslint-disable flowtype/require-return-type */
-import {test} from "tap"
+import {test} from "tap";
 
-import lacksText from "./index"
+import lacksText from "./index";
 
 test(({ok, end}) => {
-  ok(lacksText(".")("I have no period"))
-  end()
-})
+  ok(lacksText(".")("I have no period"));
+  end();
+});
 
 test(({notOk, end}) => {
-  notOk(lacksText(".")("I have no period."))
-  end()
-})
+  notOk(lacksText(".")("I have no period."));
+  end();
+});
