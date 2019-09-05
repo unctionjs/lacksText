@@ -1,11 +1,9 @@
 import {test} from "ramda";
 import escapeStringRegexp from "escape-string-regexp";
-export default function lacksText (subset) {
-  const escaped = escapeStringRegexp(subset);
-  const pattern = test(new RegExp(escaped));
+import {TextType} from "./types";
 
-
-  return function lacksTextSubset (set) {
-    return !pattern(set);
+export default function lacksText (subset: TextType | RegExp) {
+  return function lacksTextSubset (set: TextType): boolean {
+    return !test(new RegExp(escapeStringRegexp(subset)))(set);
   };
 }

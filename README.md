@@ -4,7 +4,7 @@
 ![Stability][BADGE_STABILITY]
 ![Dependencies][BADGE_DEPENDENCY]
 
-> StringType => StringType => boolean
+> TextType | RegExp => TextType => boolean
 
 Determines if a set of text does not have a subset of text.
 
