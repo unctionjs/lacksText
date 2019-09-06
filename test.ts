@@ -1,5 +1,5 @@
 
-import lacksText from "./index.ts";
+import lacksText from "./index";
 
 test(() => {
   expect(lacksText(".")("I have no period")).toBeTruthy();
