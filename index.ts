@@ -1,9 +1,8 @@
-import {test} from "ramda";
+import matchesRegExp from "@unction/matchesregexp";
 import escapeStringRegexp from "escape-string-regexp";
-import {TextType} from "./types";
 
-export default function lacksText (subset: TextType | RegExp) {
-  return function lacksTextSubset (set: TextType): boolean {
-    return !test(new RegExp(escapeStringRegexp(subset)))(set);
+export default function lacksText (subset: string) {
+  return function lacksTextSubset (set: string): boolean {
+    return !matchesRegExp(new RegExp(escapeStringRegexp(subset)))(set);
   };
 }

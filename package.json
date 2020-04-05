@@ -63,7 +63,7 @@
     "typescript": "3.x"
   },
   "dependencies": {
-    "escape-string-regexp": "1.0.5",
-    "ramda": "0.24.1"
+    "@unction/matchesregexp": "1.0.0",
+    "escape-string-regexp": "2.0.0"
   }
 }
